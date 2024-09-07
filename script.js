@@ -134,8 +134,8 @@ if (misleadingSubmitBtn) {
         }, 0);  // A delay of 0 milliseconds ensures the form reset happens first
     });
 }
-// Form incomplete warnings (every 30 seconds)
-/*
+// Form incomplete warnings (every 60 seconds)
+
 setInterval(function () {
     const incomplete = [...document.querySelectorAll('input, select, textarea')].some(input => {
         // Check if it's a select with a valid selection
@@ -149,7 +149,7 @@ setInterval(function () {
         alert("You have not completed all the required items.");
     }
 }, 60000);  // 60 seconds interval
-*/
+
 
     // Function to check if a field is filled
     function checkIfFilled(field, fieldName) {
