@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 20px auto;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select, textarea, button {
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    margin-top: 20px;
+}
+
+#submit-btn {
+    display: block;
+    margin-top: 20px;
+    background-color: white;
+    border: 0px;
+}
+
+/* Specific bad UX styles */
+input[type="range"] {
+    width: 50%;
+}
+
+select[multiple] {
+    height: 50px;
+}
+
+button:disabled {
+    background-color: grey;
+    color: white;
+}
+
+/* Custom select styling */
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.custom-select select {
+    display: none; /* Hide the default select */
+}
+
+.select-styled {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+}
+
+.select-options {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    width: 100%;
+    display: none;
+    z-index: 99;
+}
+
+.select-options div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.select-options div:hover {
+    background-color: white; /* Hover effect */
+}
+
+/* Remove hover effect on submit button */
+button:disabled {
+    background-color: grey;
+    color: white;
+}
