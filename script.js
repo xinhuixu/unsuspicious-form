@@ -173,3 +173,11 @@ setInterval(function () {
         checkIfFilled(email, 'Email Address');
     });
 
+// Get the password input and the password rules div
+const passwordInput = document.getElementById('password');
+const passwordRules = document.getElementById('password-rules');
+
+// Show password rules when the user moves to the next field (on blur)
+passwordInput.addEventListener('blur', function() {
+    passwordRules.style.display = 'block'; // Show the password rules
+});

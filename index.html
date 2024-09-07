@@ -19,7 +19,25 @@
         
         <!-- Full Name -->
         <label for="full-name">Name</label>
-        <input type="text" id="full-name" placeholder="">
+        <input type="text" id="full-name" placeholder="">     
+
+                <!-- Email Address -->
+                <label for="email">Email Address</label>
+                <input type="email" id="email">
+                <input type="checkbox" id="no-notifications"> <i>Check this box if you do not want to receive our notifications</i>
+              
+                <!-- Password Field -->
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+
+        <!-- Password Rules -->
+<div id="password-rules" style="display: none; color: red;">
+    Your password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one number.
+</div>
+
+                <!-- Contact Number -->
+                <label for="contact">Contact Number</label>
+                <input type="text" id="contact">
 
         <!-- Date of Birth Custom Select -->
         <label>Date of Birth</label>
@@ -211,16 +229,7 @@
                 <option value="AF">Afghanistan</option>
             </select>
         </div>
-
-        <!-- Contact Number -->
-        <label for="contact">Contact Number</label>
-        <input type="text" id="contact">
-
-        <!-- Email Address -->
-        <label for="email">Email Address</label>
-        <input type="email" id="email">
-        <input type="checkbox" id="no-notifications"> <i>Check this box if you do not want to receive our notifications</i>
-        
+  
         <!-- Address Information -->
         <label for="state">State</label>
         <input type="text" id="state">
