@@ -9,6 +9,10 @@ form {
     margin: 20px auto;
 }
 
+form > *:not(label) {
+    width: 100%; /* Apply 100% width to elements other than labels */
+}
+
 
 label {
     display: flex;
@@ -16,6 +20,10 @@ label {
     margin-top: 0;
     margin-right: 15px; /* Space between radio buttons */
     margin-top: 10px;
+}
+
+form > *:not(label) {
+    width: 100%; /* Apply 100% width to elements other than labels */
 }
 
 #dob-month-select {
@@ -111,4 +119,8 @@ button:disabled {
 button:disabled {
     background-color: grey;
     color: white;
+}
+
+h1 {
+    text-align: center;
 }

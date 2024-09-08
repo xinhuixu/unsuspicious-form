@@ -158,3 +158,7 @@ const passwordRules = document.getElementById('password-rules');
 passwordInput.addEventListener('blur', function() {
     passwordRules.style.display = 'block'; // Show the password rules
 });
+
+function updateCostDisplay(value) {
+    document.getElementById("cost-value").textContent = `$${value}`; // Update the span with the slider's current value
+}

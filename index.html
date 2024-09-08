@@ -47,46 +47,82 @@
 
         <!-- Date of Birth Custom Select -->
         <label>Date of Birth</label>
+
         <div class="custom-select" id="dob-month-select">
             <label for="month-01">
-                <input type="radio" id="month-01" name="dob-month" value="01"> 01
+                <input type="radio" id="month-01" name="dob-month" value="01"> Jan
             </label>
             <label for="month-02">
-                <input type="radio" id="month-02" name="dob-month" value="02"> 02
+                <input type="radio" id="month-02" name="dob-month" value="02"> Feb
             </label>
             <label for="month-03">
-                <input type="radio" id="month-03" name="dob-month" value="03"> 03
+                <input type="radio" id="month-03" name="dob-month" value="03"> Mar
             </label>
             <label for="month-04">
-                <input type="radio" id="month-04" name="dob-month" value="04"> 04
+                <input type="radio" id="month-04" name="dob-month" value="04"> Apr
             </label>
             <label for="month-05">
-                <input type="radio" id="month-05" name="dob-month" value="05"> 05
+                <input type="radio" id="month-05" name="dob-month" value="05"> May
             </label>
             <label for="month-06">
-                <input type="radio" id="month-06" name="dob-month" value="06"> 06
+                <input type="radio" id="month-06" name="dob-month" value="06"> Jun
             </label>
             <label for="month-07">
-                <input type="radio" id="month-07" name="dob-month" value="07"> 07
+                <input type="radio" id="month-07" name="dob-month" value="07"> Jul
             </label>
             <label for="month-08">
-                <input type="radio" id="month-08" name="dob-month" value="08"> 08
+                <input type="radio" id="month-08" name="dob-month" value="08"> Aug
             </label>
             <label for="month-09">
-                <input type="radio" id="month-09" name="dob-month" value="09"> 09
+                <input type="radio" id="month-09" name="dob-month" value="09"> Sep
             </label>
             <label for="month-10">
-                <input type="radio" id="month-10" name="dob-month" value="10"> 10
+                <input type="radio" id="month-10" name="dob-month" value="10"> Oct
             </label>
             <label for="month-11">
-                <input type="radio" id="month-11" name="dob-month" value="11"> 11
+                <input type="radio" id="month-11" name="dob-month" value="11"> Nov
             </label>
             <label for="month-12">
-                <input type="radio" id="month-12" name="dob-month" value="12"> 12
+                <input type="radio" id="month-12" name="dob-month" value="12"> Dec
             </label>
         </div>
 
-        <input type="date" id="dob-day" name="dob-day">
+        <br>
+<div class="custom-select" id="dob-day" name="dob-day">
+    <select>
+    <option value="01">01</option>
+    <option value="02">02</option>
+    <option value="03">03</option>
+    <option value="04">04</option>
+    <option value="05">05</option>
+    <option value="06">06</option>
+    <option value="07">07</option>
+    <option value="08">08</option>
+    <option value="09">09</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+</select>
+</div>
         <input type="text" id="dob-year" placeholder="YYYY">
 
         <!-- Age -->
@@ -276,10 +312,10 @@
         <input type="text" id="frequency">
         </div>
 
-
-        <!-- Acceptable Cost -->
-        <label for="cost">Budget</label>
-        <input type="range" id="cost" min="1" max="10">
+<!-- Acceptable Cost -->
+    <label for="cost">Budget</label>
+    <input type="range" id="cost" min="1" max="10000" value="1" oninput="updateCostDisplay(this.value)">
+    <span id="cost-value">$1</span> <!-- This span will display the current value -->
 
         <!-- Familiarity with Our Routes -->
         <label for="routes-familiarity">Familiarity with Our Routes</label>
@@ -287,7 +323,7 @@
 
         <!-- Consideration for Eco-Initiatives -->
         <label for="eco-consideration">Consideration for Eco-Initiatives</label>
-        <textarea id="eco-consideration"></textarea>
+        <textarea id="eco-consideration">Yes or No</textarea>
 
         <!-- Misleading Green Button -->
 <button type="reset" style="background-color: green; color: white;" id="misleading-submit-btn">Clear</button>
