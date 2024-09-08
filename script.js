@@ -64,33 +64,35 @@ function closeAllCustomSelects() {
 
 // Form Submission
 document.getElementById('bad-ux-form').addEventListener('submit', function (event) {
-    event.preventDefault();
+    event.preventDefault(); // Stop form submission for validation
 
-    // Simulate slow processing
-    setTimeout(function () {
-        alert("Submission failed. Please check your form and try again.");
-    }, 3000);
+    // Validate the form inputs and trigger alerts
+    let errors = [];
+
+    // Validate Full Name on submit
+    const fullNameInput = document.getElementById('full-name');
+    if (fullNameInput && !fullNameInput.value.includes(',')) {
+        errors.push("Please separate your last and first name with a comma.");
+    }
+
+    // Validate Age Input (just a demo, adjust if needed)
+    const ageInput = document.getElementById('age');
+    if (ageInput && (isNaN(parseInt(ageInput.value)) || ageInput.value.trim() === '')) {
+        errors.push("Please enter a valid age using the arrows.");
+    }
+
+    // If there are any errors, alert the user
+    if (errors.length > 0) {
+        alert(errors.join("\n"));
+    } else {
+        alert("Form submitted successfully!");
+        this.submit(); // Proceed to submit the form after validations pass
+    }
 });
 
-// Validate Full Name Field
-const fullNameInput = document.getElementById('full-name');
-if (fullNameInput) {
-    fullNameInput.addEventListener('blur', function() {
-        if (!this.value.includes(',')) {
-            alert("Please separate your last and first name with a comma.");
-        }
-    });
-}
-
-// Validate Age Input
+// Disable manual input for age (keep this restriction)
 const ageInput = document.getElementById('age');
 if (ageInput) {
-    ageInput.addEventListener('input', function () {
-        // Forcing the user to click up/down arrows
-        this.value = parseInt(this.value) || '';
-    });
-
-// Prevent any manual input for the age field
     ageInput.addEventListener('keydown', function(e) {
         e.preventDefault(); // Prevent typing numbers
     });
@@ -106,8 +108,6 @@ if (ageInput) {
     });
 }
 
-
-
 // Hide Cost Tooltip
 const costInput = document.getElementById('cost');
 if (costInput) {
@@ -116,48 +116,6 @@ if (costInput) {
         this.title = '';
     });
 }
-
-const misleadingSubmitBtn = document.getElementById('misleading-submit-btn');
-
-// Check if the button exists
-if (misleadingSubmitBtn) {
-    misleadingSubmitBtn.addEventListener('click', function() {
-        // Get the form element
-        const form = document.getElementById('bad-ux-form');
-        
-        // Reset the form fields
-        form.reset();
-        
-        // Delay the alert slightly to ensure the form is cleared first
-        setTimeout(function() {
-            alert("Form cleared! Please re-enter all your information.");
-        }, 0);  // A delay of 0 milliseconds ensures the form reset happens first
-    });
-}
-// Form incomplete warnings (every 60 seconds)
-
-setInterval(function () {
-    const incomplete = [...document.querySelectorAll('input, select, textarea')].some(input => {
-        // Check if it's a select with a valid selection
-        if (input.tagName === 'SELECT') {
-            return input.selectedIndex === 0;
-        }
-        return input.value.trim() === '';  // Trim spaces
-    });
-
-    if (incomplete) {
-        alert("You have not completed all the required items.");
-    }
-}, 60000);  // 60 seconds interval
-
-// Get the password input and the password rules div
-const passwordInput = document.getElementById('password');
-const passwordRules = document.getElementById('password-rules');
-
-// Show password rules when the user moves to the next field (on blur)
-passwordInput.addEventListener('blur', function() {
-    passwordRules.style.display = 'block'; // Show the password rules
-});
 
 function updateCostDisplay(value) {
     document.getElementById("cost-value").textContent = `$${value}`; // Update the span with the slider's current value
