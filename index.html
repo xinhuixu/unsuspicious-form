@@ -28,7 +28,9 @@
                 <label for="no-notifications">
                     <input type="checkbox" id="no-notifications">
                     <i>Check this box if you do not want to receive our notifications</i>
+                    
                 </label>
+                
                 
                 <!-- Password Field -->
         <label for="password">Password</label>
@@ -46,20 +48,42 @@
         <!-- Date of Birth Custom Select -->
         <label>Date of Birth</label>
         <div class="custom-select" id="dob-month-select">
-            <select>
-                <option value="01">01</option>
-                <option value="02">02</option>
-                <option value="03">03</option>
-                <option value="04">04</option>
-                <option value="05">05</option>
-                <option value="06">06</option>
-                <option value="07">07</option>
-                <option value="08">08</option>
-                <option value="09">09</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-            </select>
+            <label for="month-01">
+                <input type="radio" id="month-01" name="dob-month" value="01"> 01
+            </label>
+            <label for="month-02">
+                <input type="radio" id="month-02" name="dob-month" value="02"> 02
+            </label>
+            <label for="month-03">
+                <input type="radio" id="month-03" name="dob-month" value="03"> 03
+            </label>
+            <label for="month-04">
+                <input type="radio" id="month-04" name="dob-month" value="04"> 04
+            </label>
+            <label for="month-05">
+                <input type="radio" id="month-05" name="dob-month" value="05"> 05
+            </label>
+            <label for="month-06">
+                <input type="radio" id="month-06" name="dob-month" value="06"> 06
+            </label>
+            <label for="month-07">
+                <input type="radio" id="month-07" name="dob-month" value="07"> 07
+            </label>
+            <label for="month-08">
+                <input type="radio" id="month-08" name="dob-month" value="08"> 08
+            </label>
+            <label for="month-09">
+                <input type="radio" id="month-09" name="dob-month" value="09"> 09
+            </label>
+            <label for="month-10">
+                <input type="radio" id="month-10" name="dob-month" value="10"> 10
+            </label>
+            <label for="month-11">
+                <input type="radio" id="month-11" name="dob-month" value="11"> 11
+            </label>
+            <label for="month-12">
+                <input type="radio" id="month-12" name="dob-month" value="12"> 12
+            </label>
         </div>
 
         <input type="date" id="dob-day" name="dob-day">
@@ -241,9 +265,6 @@
         <label for="street">Street Address</label>
         <input type="text" id="street">
 
-        <label for="apt">Apt Address</label>
-        <input type="text" id="apt">
-
         <label for="city">City</label>
         <input type="text" id="city">
 
@@ -252,27 +273,9 @@
 
         <!-- Travel Frequency -->
         <label for="frequency">Travel Frequency</label>
-        <div class="custom-select" id="frequency-select">
-            <select>
-                <option value=""></option>
-                <option value="often">Often</option>
-                <option value="rarely">Rarely</option>
-            </select>
+        <input type="text" id="frequency">
         </div>
 
-        <!-- Favorite Destination Type -->
-        <label for="fav-destination">Favorite Destination</label>
-        <input type="text" id="fav-destination">
-
-        <!-- Key Service in Travel Custom Select -->
-        <label for="key-service">Additional Benefits</label>
-        <div class="custom-select" id="key-service-select">
-            <select>
-                <option value="1">Benefit 1</option>
-                <option value="2">Benefit 2</option>
-                <option value="2">Benefit 3</option>
-            </select>
-        </div>
 
         <!-- Acceptable Cost -->
         <label for="cost">Budget</label>

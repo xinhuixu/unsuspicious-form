@@ -9,8 +9,25 @@ form {
     margin: 20px auto;
 }
 
+
 label {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-right: 15px; /* Space between radio buttons */
     margin-top: 10px;
+}
+
+#dob-month-select {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+
+input[type="radio"] {
+    margin-right: 8px; /* Adjust spacing between radio and text */
 }
 
 input, select, textarea, button {

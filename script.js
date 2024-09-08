@@ -150,29 +150,6 @@ setInterval(function () {
     }
 }, 60000);  // 60 seconds interval
 
-
-    // Function to check if a field is filled
-    function checkIfFilled(field, fieldName) {
-        if (!field.value.trim()) {  // Use trim to remove any whitespace
-            alert(`${fieldName} is required.`);
-        }
-    }
-
-    // Add blur event listeners only to specific fields
-
-    const contact = document.getElementById('contact');
-    const email = document.getElementById('email');
-
-
-    // Attach event listeners to each field
-    contact.addEventListener('blur', function() {
-        checkIfFilled(contact, 'Contact Number');
-    });
-
-    email.addEventListener('blur', function() {
-        checkIfFilled(email, 'Email Address');
-    });
-
 // Get the password input and the password rules div
 const passwordInput = document.getElementById('password');
 const passwordRules = document.getElementById('password-rules');
